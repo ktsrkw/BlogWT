@@ -10,7 +10,7 @@ use `simpleblogofwt`;
 
 -- 建博客表
 create table `blog`(
-	`id` int unsigned auto_increment,
+    `id` int unsigned auto_increment,
     `content` varchar(15000),
     `time` datetime,
     `category` varchar(20),
