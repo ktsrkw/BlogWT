@@ -1,5 +1,5 @@
 ## 使用到的技术
-springboot/mybatis/thymeleaf/mysql
+springboot/mybatis/thymeleaf/mysql/shiro
 
 ## 数据库
 ### 建表SQL语句
