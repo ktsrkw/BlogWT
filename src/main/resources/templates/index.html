@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BlogWT</title>
+</head>
+<body>
+    <h1>BlogWT</h1>
+    <table>
+        <tr th:each="blog:${blogs}">
+            <td th:text="${blog.getId()}"></td>
+            <td th:text="${blog.getContent()}"></td>
+            <td th:text="${blog.getCategory()}"></td>
+            <td th:text="${#dates.format(blog.getTime(),'yyyy-MM-dd HH:mm:ss')}"></td>
+        </tr>
+    </table>
+</body>
+</html>

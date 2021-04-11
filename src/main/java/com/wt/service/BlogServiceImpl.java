@@ -5,6 +5,8 @@ import com.wt.pojo.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BlogServiceImpl implements BlogService{
     @Autowired
@@ -13,5 +15,10 @@ public class BlogServiceImpl implements BlogService{
     @Override
     public Blog getBlogById(int id) {
         return blogMapper.getBlogById(id);
+    }
+
+    @Override
+    public List<Blog> getAllBlogs() {
+        return blogMapper.getAllBlogs();
     }
 }

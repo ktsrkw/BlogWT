@@ -6,4 +6,8 @@
     <select id="getBlogById" parameterType="int" resultType="Blog">
         select * from `blog` where `id`=#{id}
     </select>
+
+    <select id="getAllBlogs" resultType="Blog">
+        select * from `blog`
+    </select>
 </mapper>
