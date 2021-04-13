@@ -2,19 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>BlogWT</title>
+    <title>管理Blog</title>
 </head>
 <body>
-    <h1>BlogWT</h1>
+    <h1>Welcome,WT</h1>
     <table>
         <tr th:each="blog:${blogs}">
             <td th:text="${blog.getId()}"></td>
             <td th:text="${blog.getContent()}"></td>
             <td th:text="${blog.getCategory()}"></td>
             <td th:text="${#dates.format(blog.getTime(),'yyyy-MM-dd HH:mm:ss')}"></td>
-            <td><a th:href="@{/blog/}+${blog.getId()}">查看</a></td>
+            <td><a th:href="@{/update/}+${blog.getId()}">修改</a></td>
+            <td><a th:href="@{/delete/}+${blog.getId()}">删除</a></td>
         </tr>
     </table>
-    <a th:href="@{/blogList}">管理Blog</a>
 </body>
 </html>

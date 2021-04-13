@@ -11,4 +11,7 @@ public interface BlogService {
 
     //拿到所有博客列表
     List<Blog> getAllBlogs();
+
+    //根据id删除博客
+    int deleteBlogById(int id);
 }

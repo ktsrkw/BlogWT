@@ -10,4 +10,8 @@
     <select id="getAllBlogs" resultType="Blog">
         select * from `blog`
     </select>
+
+    <delete id="deleteBlogById" parameterType="int">
+        delete from `Blog` where `id`=#{id}
+    </delete>
 </mapper>
