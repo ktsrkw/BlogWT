@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -56,5 +57,21 @@ public class RouterController {
         return "redirect:/index";
     }
 
+    @GetMapping("/update/{id}")
+    public String toUpdatePage(@PathVariable("id") Integer id,Model model){
+        //根据id拿到博客信息
+        Blog blog = blogService.getBlogById(id);
+        model.addAttribute("blog",blog);
+
+        return "updateBlog";
+    }
+
+    @PostMapping("/updateBlog")
+    public String updateBlog(Blog blog){
+        blogService.updateBlog(blog);
+
+        //更新后跳转到被更新的博客页看效果
+        return "redirect:/blog/" + blog.getId();
+    }
 
 }

@@ -14,4 +14,9 @@
     <delete id="deleteBlogById" parameterType="int">
         delete from `Blog` where `id`=#{id}
     </delete>
+
+    <update id="updateBlog" parameterType="Blog">
+        update `Blog` set `content`=#{content},`category`=#{category}
+        where `id`=#{id}
+    </update>
 </mapper>

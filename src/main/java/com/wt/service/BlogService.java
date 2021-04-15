@@ -14,4 +14,7 @@ public interface BlogService {
 
     //根据id删除博客
     int deleteBlogById(int id);
+
+    //修改博客的信息
+    int updateBlog(Blog blog);
 }
